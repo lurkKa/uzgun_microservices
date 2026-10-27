@@ -1,0 +1,31 @@
+package com.uz.uzgun_microservices.security;
+
+import com.uz.uzgun_microservices.shared.api.ApiErrorResponse;
+import com.uz.uzgun_microservices.shared.api.GenericResponse;
+import com.uz.uzgun_microservices.shared.api.TraceContext;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.List;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Component;
+import tools.jackson.databind.ObjectMapper;
+
+@Component
+@RequiredArgsConstructor
+public class SecurityErrorWriter {
+  private final ObjectMapper objectMapper;
+
+  public void write(HttpServletResponse response, HttpStatus status, String code, String message)
+      throws IOException {
+    response.setStatus(status.value());
+    response.setContentType(MediaType.APPLICATION_JSON_VALUE);
+    response.setCharacterEncoding(StandardCharsets.UTF_8.name());
+    objectMapper.writeValue(
+        response.getOutputStream(),
+        GenericResponse.failure(
+            List.of(ApiErrorResponse.of(code, message)), TraceContext.traceId()));
+  }
+}

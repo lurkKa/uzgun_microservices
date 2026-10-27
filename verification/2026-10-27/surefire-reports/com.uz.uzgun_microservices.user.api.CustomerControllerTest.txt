@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.uz.uzgun_microservices.user.api.CustomerControllerTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.533 s -- in com.uz.uzgun_microservices.user.api.CustomerControllerTest

@@ -1,0 +1,41 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: uzgun
+      POSTGRES_USER: ${DB_USER:-uzgun}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+  app:
+    build:
+      context: .
+      args:
+        APP_VERSION: local
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/uzgun
+      DB_USER: ${DB_USER:-uzgun}
+      DB_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD}
+      JWT_ISSUER_URI: ${JWT_ISSUER_URI:?Set JWT_ISSUER_URI}
+      JWT_AUDIENCE: ${JWT_AUDIENCE:-uzgun-user-service}
+      API_DOCS_ENABLED: ${API_DOCS_ENABLED:-false}
+      CHECKOUT_ELIGIBILITY_ENABLED: ${CHECKOUT_ELIGIBILITY_ENABLED:-false}
+      RISK_BASE_URL: ${RISK_BASE_URL:-}
+    stop_grace_period: 30s
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  pgdata:

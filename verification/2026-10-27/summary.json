@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-27",
+  "timezone": "Europe/Moscow",
+  "java": "21",
+  "command": "mvn -B -ntp spotless:apply clean verify -Pintegration",
+  "tests": 42,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "suites": [
+    {
+      "name": "com.uz.uzgun_microservices.CheckoutPermissionIT",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "12.539"
+    },
+    {
+      "name": "com.uz.uzgun_microservices.checkout.eligibility.CheckoutEligibilityConfigurationTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.528"
+    },
+    {
+      "name": "com.uz.uzgun_microservices.checkout.eligibility.CheckoutPolicyTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "1.071"
+    },
+    {
+      "name": "com.uz.uzgun_microservices.checkout.integration.risk.HttpRiskClientTest",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "1.738"
+    },
+    {
+      "name": "com.uz.uzgun_microservices.user.api.CustomerControllerTest",
+      "tests": "13",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.533"
+    },
+    {
+      "name": "com.uz.uzgun_microservices.user.application.CheckoutPermissionServiceTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.165"
+    }
+  ],
+  "docker_image": "sha256:f966e57a48caa6e885f09e8f88fa826eb3b6db2c29e12cd57746b8e8d4d3ba01",
+  "docker_smoke": "passed"
+}

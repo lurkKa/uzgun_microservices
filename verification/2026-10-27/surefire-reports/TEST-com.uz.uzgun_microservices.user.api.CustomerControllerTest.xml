@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.uz.uzgun_microservices.user.api.CustomerControllerTest" time="3.533" tests="13" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/qarrooak/Documents/PARMOUNT/uzgun_microservices/target/test-classes:/home/qarrooak/Documents/PARMOUNT/uzgun_microservices/target/classes:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-webmvc/4.0.0/spring-boot-starter-webmvc-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter/4.0.0/spring-boot-starter-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-logging/4.0.0/spring-boot-starter-logging-4.0.0.jar:/home/qarrooak/.m2/repository/ch/qos/logback/logback-classic/1.5.21/logback-classic-1.5.21.jar:/home/qarrooak/.m2/repository/ch/qos/logback/logback-core/1.5.21/logback-core-1.5.21.jar:/home/qarrooak/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.25.2/log4j-to-slf4j-2.25.2.jar:/home/qarrooak/.m2/repository/org/apache/logging/log4j/log4j-api/2.25.2/log4j-api-2.25.2.jar:/home/qarrooak/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/4.0.0/spring-boot-autoconfigure-4.0.0.jar:/home/qarrooak/.m2/repository/jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar:/home/qarrooak/.m2/repository/org/yaml/snakeyaml/2.5/snakeyaml-2.5.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-jackson/4.0.0/spring-boot-starter-jackson-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-jackson/4.0.0/spring-boot-jackson-4.0.0.jar:/home/qarrooak/.m2/repository/tools/jackson/core/jackson-databind/3.0.2/jackson-databind-3.0.2.jar:/home/qarrooak/.m2/repository/tools/jackson/core/jackson-core/3.0.2/jackson-core-3.0.2.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/4.0.0/spring-boot-starter-tomcat-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat-runtime/4.0.0/spring-boot-starter-tomcat-runtime-4.0.0.jar:/home/qarrooak/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/11.0.14/tomcat-embed-core-11.0.14.jar:/home/qarrooak/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/11.0.14/tomcat-embed-websocket-11.0.14.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-tomcat/4.0.0/spring-boot-tomcat-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-http-converter/4.0.0/spring-boot-http-converter-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot/4.0.0/spring-boot-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/spring-context/7.0.1/spring-context-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/spring-web/7.0.1/spring-web-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/spring-beans/7.0.1/spring-beans-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-webmvc/4.0.0/spring-boot-webmvc-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-servlet/4.0.0/spring-boot-servlet-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/spring-webmvc/7.0.1/spring-webmvc-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/spring-expression/7.0.1/spring-expression-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/4.0.0/spring-boot-starter-data-jpa-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/4.0.0/spring-boot-starter-jdbc-4.0.0.jar:/home/qarrooak/.m2/repository/com/zaxxer/HikariCP/7.0.2/HikariCP-7.0.2.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-data-jpa/4.0.0/spring-boot-data-jpa-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-data-commons/4.0.0/spring-boot-data-commons-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-persistence/4.0.0/spring-boot-persistence-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/data/spring-data-commons/4.0.0/spring-data-commons-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-hibernate/4.0.0/spring-boot-hibernate-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-jpa/4.0.0/spring-boot-jpa-4.0.0.jar:/home/qarrooak/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.2.0/jakarta.persistence-api-3.2.0.jar:/home/qarrooak/.m2/repository/org/hibernate/orm/hibernate-core/7.1.8.Final/hibernate-core-7.1.8.Final.jar:/home/qarrooak/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/qarrooak/.m2/repository/org/hibernate/models/hibernate-models/1.0.1/hibernate-models-1.0.1.jar:/home/qarrooak/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.6/jaxb-runtime-4.0.6.jar:/home/qarrooak/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.6/jaxb-core-4.0.6.jar:/home/qarrooak/.m2/repository/org/eclipse/angus/angus-activation/2.0.3/angus-activation-2.0.3.jar:/home/qarrooak/.m2/repository/org/glassfish/jaxb/txw2/4.0.6/txw2-4.0.6.jar:/home/qarrooak/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/qarrooak/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/spring-orm/7.0.1/spring-orm-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/data/spring-data-jpa/4.0.0/spring-data-jpa-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/spring-tx/7.0.1/spring-tx-7.0.1.jar:/home/qarrooak/.m2/repository/org/antlr/antlr4-runtime/4.13.2/antlr4-runtime-4.13.2.jar:/home/qarrooak/.m2/repository/org/springframework/spring-aspects/7.0.1/spring-aspects-7.0.1.jar:/home/qarrooak/.m2/repository/org/aspectj/aspectjweaver/1.9.25/aspectjweaver-1.9.25.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-jdbc/4.0.0/spring-boot-jdbc-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-sql/4.0.0/spring-boot-sql-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-transaction/4.0.0/spring-boot-transaction-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/spring-jdbc/7.0.1/spring-jdbc-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-security-oauth2-resource-server/4.0.0/spring-boot-starter-security-oauth2-resource-server-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-security/4.0.0/spring-boot-starter-security-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-security/4.0.0/spring-boot-security-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-config/7.0.0/spring-security-config-7.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-web/7.0.0/spring-security-web-7.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/spring-aop/7.0.1/spring-aop-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-security-oauth2-resource-server/4.0.0/spring-boot-security-oauth2-resource-server-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-oauth2-jose/7.0.0/spring-security-oauth2-jose-7.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-core/7.0.0/spring-security-core-7.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-crypto/7.0.0/spring-security-crypto-7.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-oauth2-core/7.0.0/spring-security-oauth2-core-7.0.0.jar:/home/qarrooak/.m2/repository/com/nimbusds/nimbus-jose-jwt/10.4/nimbus-jose-jwt-10.4.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-oauth2-resource-server/7.0.0/spring-security-oauth2-resource-server-7.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-validation/4.0.0/spring-boot-starter-validation-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-validation/4.0.0/spring-boot-validation-4.0.0.jar:/home/qarrooak/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/11.0.14/tomcat-embed-el-11.0.14.jar:/home/qarrooak/.m2/repository/org/hibernate/validator/hibernate-validator/9.0.1.Final/hibernate-validator-9.0.1.Final.jar:/home/qarrooak/.m2/repository/jakarta/validation/jakarta.validation-api/3.1.1/jakarta.validation-api-3.1.1.jar:/home/qarrooak/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/home/qarrooak/.m2/repository/com/fasterxml/classmate/1.7.1/classmate-1.7.1.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-flyway/4.0.0/spring-boot-starter-flyway-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-flyway/4.0.0/spring-boot-flyway-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/4.0.0/spring-boot-starter-actuator-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-micrometer-metrics/4.0.0/spring-boot-starter-micrometer-metrics-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-micrometer-metrics/4.0.0/spring-boot-micrometer-metrics-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-micrometer-observation/4.0.0/spring-boot-micrometer-observation-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/4.0.0/spring-boot-actuator-autoconfigure-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-actuator/4.0.0/spring-boot-actuator-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-health/4.0.0/spring-boot-health-4.0.0.jar:/home/qarrooak/.m2/repository/io/micrometer/micrometer-observation/1.16.0/micrometer-observation-1.16.0.jar:/home/qarrooak/.m2/repository/io/micrometer/micrometer-commons/1.16.0/micrometer-commons-1.16.0.jar:/home/qarrooak/.m2/repository/io/micrometer/micrometer-jakarta9/1.16.0/micrometer-jakarta9-1.16.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-restclient/4.0.0/spring-boot-starter-restclient-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-restclient/4.0.0/spring-boot-restclient-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-http-client/4.0.0/spring-boot-http-client-4.0.0.jar:/home/qarrooak/.m2/repository/org/postgresql/postgresql/42.7.8/postgresql-42.7.8.jar:/home/qarrooak/.m2/repository/org/checkerframework/checker-qual/3.49.5/checker-qual-3.49.5.jar:/home/qarrooak/.m2/repository/org/flywaydb/flyway-database-postgresql/11.14.1/flyway-database-postgresql-11.14.1.jar:/home/qarrooak/.m2/repository/org/flywaydb/flyway-core/11.14.1/flyway-core-11.14.1.jar:/home/qarrooak/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.20.1/jackson-databind-2.20.1.jar:/home/qarrooak/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.20/jackson-annotations-2.20.jar:/home/qarrooak/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.20.1/jackson-core-2.20.1.jar:/home/qarrooak/.m2/repository/io/micrometer/micrometer-registry-prometheus/1.16.0/micrometer-registry-prometheus-1.16.0.jar:/home/qarrooak/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/qarrooak/.m2/repository/io/micrometer/micrometer-core/1.16.0/micrometer-core-1.16.0.jar:/home/qarrooak/.m2/repository/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar:/home/qarrooak/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/home/qarrooak/.m2/repository/io/prometheus/prometheus-metrics-core/1.4.3/prometheus-metrics-core-1.4.3.jar:/home/qarrooak/.m2/repository/io/prometheus/prometheus-metrics-model/1.4.3/prometheus-metrics-model-1.4.3.jar:/home/qarrooak/.m2/repository/io/prometheus/prometheus-metrics-config/1.4.3/prometheus-metrics-config-1.4.3.jar:/home/qarrooak/.m2/repository/io/prometheus/prometheus-metrics-tracer-common/1.4.3/prometheus-metrics-tracer-common-1.4.3.jar:/home/qarrooak/.m2/repository/io/prometheus/prometheus-metrics-exposition-formats/1.4.3/prometheus-metrics-exposition-formats-1.4.3.jar:/home/qarrooak/.m2/repository/io/prometheus/prometheus-metrics-exposition-textformats/1.4.3/prometheus-metrics-exposition-textformats-1.4.3.jar:/home/qarrooak/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/3.0.2/springdoc-openapi-starter-webmvc-ui-3.0.2.jar:/home/qarrooak/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/3.0.2/springdoc-openapi-starter-webmvc-api-3.0.2.jar:/home/qarrooak/.m2/repository/org/springdoc/springdoc-openapi-starter-common/3.0.2/springdoc-openapi-starter-common-3.0.2.jar:/home/qarrooak/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.43/swagger-core-jakarta-2.2.43.jar:/home/qarrooak/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.43/swagger-annotations-jakarta-2.2.43.jar:/home/qarrooak/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.43/swagger-models-jakarta-2.2.43.jar:/home/qarrooak/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.20.1/jackson-dataformat-yaml-2.20.1.jar:/home/qarrooak/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.20.1/jackson-datatype-jsr310-2.20.1.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-web-server/4.0.0/spring-boot-web-server-4.0.0.jar:/home/qarrooak/.m2/repository/org/webjars/swagger-ui/5.32.0/swagger-ui-5.32.0.jar:/home/qarrooak/.m2/repository/org/webjars/webjars-locator-lite/1.1.2/webjars-locator-lite-1.1.2.jar:/home/qarrooak/.m2/repository/io/github/resilience4j/resilience4j-circuitbreaker/2.4.0/resilience4j-circuitbreaker-2.4.0.jar:/home/qarrooak/.m2/repository/io/github/resilience4j/resilience4j-core/2.4.0/resilience4j-core-2.4.0.jar:/home/qarrooak/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/qarrooak/.m2/repository/io/github/resilience4j/resilience4j-micrometer/2.4.0/resilience4j-micrometer-2.4.0.jar:/home/qarrooak/.m2/repository/io/github/resilience4j/resilience4j-bulkhead/2.4.0/resilience4j-bulkhead-2.4.0.jar:/home/qarrooak/.m2/repository/io/github/resilience4j/resilience4j-retry/2.4.0/resilience4j-retry-2.4.0.jar:/home/qarrooak/.m2/repository/io/github/resilience4j/resilience4j-ratelimiter/2.4.0/resilience4j-ratelimiter-2.4.0.jar:/home/qarrooak/.m2/repository/io/github/resilience4j/resilience4j-timelimiter/2.4.0/resilience4j-timelimiter-2.4.0.jar:/home/qarrooak/.m2/repository/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-configuration-processor/4.0.0/spring-boot-configuration-processor-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-test/4.0.0/spring-boot-starter-test-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-test/4.0.0/spring-boot-test-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/4.0.0/spring-boot-test-autoconfigure-4.0.0.jar:/home/qarrooak/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/qarrooak/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.4/jakarta.xml.bind-api-4.0.4.jar:/home/qarrooak/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.4/jakarta.activation-api-2.1.4.jar:/home/qarrooak/.m2/repository/net/minidev/json-smart/2.6.0/json-smart-2.6.0.jar:/home/qarrooak/.m2/repository/net/minidev/accessors-smart/2.6.0/accessors-smart-2.6.0.jar:/home/qarrooak/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/home/qarrooak/.m2/repository/org/assertj/assertj-core/3.27.6/assertj-core-3.27.6.jar:/home/qarrooak/.m2/repository/net/bytebuddy/byte-buddy/1.17.8/byte-buddy-1.17.8.jar:/home/qarrooak/.m2/repository/org/awaitility/awaitility/4.3.0/awaitility-4.3.0.jar:/home/qarrooak/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/qarrooak/.m2/repository/org/junit/jupiter/junit-jupiter/6.0.1/junit-jupiter-6.0.1.jar:/home/qarrooak/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.0.1/junit-jupiter-api-6.0.1.jar:/home/qarrooak/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/qarrooak/.m2/repository/org/junit/platform/junit-platform-commons/6.0.1/junit-platform-commons-6.0.1.jar:/home/qarrooak/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/qarrooak/.m2/repository/org/junit/jupiter/junit-jupiter-params/6.0.1/junit-jupiter-params-6.0.1.jar:/home/qarrooak/.m2/repository/org/junit/jupiter/junit-jupiter-engine/6.0.1/junit-jupiter-engine-6.0.1.jar:/home/qarrooak/.m2/repository/org/junit/platform/junit-platform-engine/6.0.1/junit-platform-engine-6.0.1.jar:/home/qarrooak/.m2/repository/org/mockito/mockito-core/5.20.0/mockito-core-5.20.0.jar:/home/qarrooak/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar:/home/qarrooak/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/qarrooak/.m2/repository/org/mockito/mockito-junit-jupiter/5.20.0/mockito-junit-jupiter-5.20.0.jar:/home/qarrooak/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/qarrooak/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/qarrooak/.m2/repository/org/springframework/spring-core/7.0.1/spring-core-7.0.1.jar:/home/qarrooak/.m2/repository/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.jar:/home/qarrooak/.m2/repository/org/springframework/spring-test/7.0.1/spring-test-7.0.1.jar:/home/qarrooak/.m2/repository/org/xmlunit/xmlunit-core/2.10.4/xmlunit-core-2.10.4.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-webmvc-test/4.0.0/spring-boot-starter-webmvc-test-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-jackson-test/4.0.0/spring-boot-starter-jackson-test-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-webmvc-test/4.0.0/spring-boot-webmvc-test-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-resttestclient/4.0.0/spring-boot-resttestclient-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-security-test/4.0.0/spring-boot-starter-security-test-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-security-test/4.0.0/spring-boot-security-test-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-test/7.0.0/spring-security-test-7.0.0.jar:/home/qarrooak/.m2/repository/org/testcontainers/testcontainers-postgresql/2.0.2/testcontainers-postgresql-2.0.2.jar:/home/qarrooak/.m2/repository/org/testcontainers/testcontainers-jdbc/2.0.2/testcontainers-jdbc-2.0.2.jar:/home/qarrooak/.m2/repository/org/testcontainers/testcontainers-database-commons/2.0.2/testcontainers-database-commons-2.0.2.jar:/home/qarrooak/.m2/repository/org/testcontainers/testcontainers-junit-jupiter/2.0.2/testcontainers-junit-jupiter-2.0.2.jar:/home/qarrooak/.m2/repository/org/testcontainers/testcontainers/2.0.2/testcontainers-2.0.2.jar:/home/qarrooak/.m2/repository/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar:/home/qarrooak/.m2/repository/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar:/home/qarrooak/.m2/repository/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar:/home/qarrooak/.m2/repository/org/apache/commons/commons-lang3/3.19.0/commons-lang3-3.19.0.jar:/home/qarrooak/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/home/qarrooak/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/home/qarrooak/.m2/repository/com/github/docker-java/docker-java-api/3.7.0/docker-java-api-3.7.0.jar:/home/qarrooak/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.7.0/docker-java-transport-zerodep-3.7.0.jar:/home/qarrooak/.m2/repository/com/github/docker-java/docker-java-transport/3.7.0/docker-java-transport-3.7.0.jar:/home/qarrooak/.m2/repository/net/java/dev/jna/jna/5.18.1/jna-5.18.1.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="APPLICATION_NAME" value="uzgun-user-service"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/qarrooak/Documents/PARMOUNT/uzgun_microservices/target/surefire/surefirebooter-20261027163714449_3.jar /home/qarrooak/Documents/PARMOUNT/uzgun_microservices/target/surefire 2026-10-27T16-37-14_408-jvmRun1 surefire-20261027163714449_1tmp surefire_0-20261027163714449_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/qarrooak/Documents/PARMOUNT/uzgun_microservices/target/test-classes:/home/qarrooak/Documents/PARMOUNT/uzgun_microservices/target/classes:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-webmvc/4.0.0/spring-boot-starter-webmvc-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter/4.0.0/spring-boot-starter-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-logging/4.0.0/spring-boot-starter-logging-4.0.0.jar:/home/qarrooak/.m2/repository/ch/qos/logback/logback-classic/1.5.21/logback-classic-1.5.21.jar:/home/qarrooak/.m2/repository/ch/qos/logback/logback-core/1.5.21/logback-core-1.5.21.jar:/home/qarrooak/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.25.2/log4j-to-slf4j-2.25.2.jar:/home/qarrooak/.m2/repository/org/apache/logging/log4j/log4j-api/2.25.2/log4j-api-2.25.2.jar:/home/qarrooak/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/4.0.0/spring-boot-autoconfigure-4.0.0.jar:/home/qarrooak/.m2/repository/jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar:/home/qarrooak/.m2/repository/org/yaml/snakeyaml/2.5/snakeyaml-2.5.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-jackson/4.0.0/spring-boot-starter-jackson-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-jackson/4.0.0/spring-boot-jackson-4.0.0.jar:/home/qarrooak/.m2/repository/tools/jackson/core/jackson-databind/3.0.2/jackson-databind-3.0.2.jar:/home/qarrooak/.m2/repository/tools/jackson/core/jackson-core/3.0.2/jackson-core-3.0.2.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/4.0.0/spring-boot-starter-tomcat-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat-runtime/4.0.0/spring-boot-starter-tomcat-runtime-4.0.0.jar:/home/qarrooak/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/11.0.14/tomcat-embed-core-11.0.14.jar:/home/qarrooak/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/11.0.14/tomcat-embed-websocket-11.0.14.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-tomcat/4.0.0/spring-boot-tomcat-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-http-converter/4.0.0/spring-boot-http-converter-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot/4.0.0/spring-boot-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/spring-context/7.0.1/spring-context-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/spring-web/7.0.1/spring-web-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/spring-beans/7.0.1/spring-beans-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-webmvc/4.0.0/spring-boot-webmvc-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-servlet/4.0.0/spring-boot-servlet-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/spring-webmvc/7.0.1/spring-webmvc-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/spring-expression/7.0.1/spring-expression-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/4.0.0/spring-boot-starter-data-jpa-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/4.0.0/spring-boot-starter-jdbc-4.0.0.jar:/home/qarrooak/.m2/repository/com/zaxxer/HikariCP/7.0.2/HikariCP-7.0.2.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-data-jpa/4.0.0/spring-boot-data-jpa-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-data-commons/4.0.0/spring-boot-data-commons-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-persistence/4.0.0/spring-boot-persistence-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/data/spring-data-commons/4.0.0/spring-data-commons-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-hibernate/4.0.0/spring-boot-hibernate-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-jpa/4.0.0/spring-boot-jpa-4.0.0.jar:/home/qarrooak/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.2.0/jakarta.persistence-api-3.2.0.jar:/home/qarrooak/.m2/repository/org/hibernate/orm/hibernate-core/7.1.8.Final/hibernate-core-7.1.8.Final.jar:/home/qarrooak/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/qarrooak/.m2/repository/org/hibernate/models/hibernate-models/1.0.1/hibernate-models-1.0.1.jar:/home/qarrooak/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.6/jaxb-runtime-4.0.6.jar:/home/qarrooak/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.6/jaxb-core-4.0.6.jar:/home/qarrooak/.m2/repository/org/eclipse/angus/angus-activation/2.0.3/angus-activation-2.0.3.jar:/home/qarrooak/.m2/repository/org/glassfish/jaxb/txw2/4.0.6/txw2-4.0.6.jar:/home/qarrooak/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/qarrooak/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/spring-orm/7.0.1/spring-orm-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/data/spring-data-jpa/4.0.0/spring-data-jpa-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/spring-tx/7.0.1/spring-tx-7.0.1.jar:/home/qarrooak/.m2/repository/org/antlr/antlr4-runtime/4.13.2/antlr4-runtime-4.13.2.jar:/home/qarrooak/.m2/repository/org/springframework/spring-aspects/7.0.1/spring-aspects-7.0.1.jar:/home/qarrooak/.m2/repository/org/aspectj/aspectjweaver/1.9.25/aspectjweaver-1.9.25.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-jdbc/4.0.0/spring-boot-jdbc-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-sql/4.0.0/spring-boot-sql-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-transaction/4.0.0/spring-boot-transaction-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/spring-jdbc/7.0.1/spring-jdbc-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-security-oauth2-resource-server/4.0.0/spring-boot-starter-security-oauth2-resource-server-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-security/4.0.0/spring-boot-starter-security-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-security/4.0.0/spring-boot-security-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-config/7.0.0/spring-security-config-7.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-web/7.0.0/spring-security-web-7.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/spring-aop/7.0.1/spring-aop-7.0.1.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-security-oauth2-resource-server/4.0.0/spring-boot-security-oauth2-resource-server-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-oauth2-jose/7.0.0/spring-security-oauth2-jose-7.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-core/7.0.0/spring-security-core-7.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-crypto/7.0.0/spring-security-crypto-7.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-oauth2-core/7.0.0/spring-security-oauth2-core-7.0.0.jar:/home/qarrooak/.m2/repository/com/nimbusds/nimbus-jose-jwt/10.4/nimbus-jose-jwt-10.4.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-oauth2-resource-server/7.0.0/spring-security-oauth2-resource-server-7.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-validation/4.0.0/spring-boot-starter-validation-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-validation/4.0.0/spring-boot-validation-4.0.0.jar:/home/qarrooak/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/11.0.14/tomcat-embed-el-11.0.14.jar:/home/qarrooak/.m2/repository/org/hibernate/validator/hibernate-validator/9.0.1.Final/hibernate-validator-9.0.1.Final.jar:/home/qarrooak/.m2/repository/jakarta/validation/jakarta.validation-api/3.1.1/jakarta.validation-api-3.1.1.jar:/home/qarrooak/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/home/qarrooak/.m2/repository/com/fasterxml/classmate/1.7.1/classmate-1.7.1.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-flyway/4.0.0/spring-boot-starter-flyway-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-flyway/4.0.0/spring-boot-flyway-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/4.0.0/spring-boot-starter-actuator-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-micrometer-metrics/4.0.0/spring-boot-starter-micrometer-metrics-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-micrometer-metrics/4.0.0/spring-boot-micrometer-metrics-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-micrometer-observation/4.0.0/spring-boot-micrometer-observation-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/4.0.0/spring-boot-actuator-autoconfigure-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-actuator/4.0.0/spring-boot-actuator-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-health/4.0.0/spring-boot-health-4.0.0.jar:/home/qarrooak/.m2/repository/io/micrometer/micrometer-observation/1.16.0/micrometer-observation-1.16.0.jar:/home/qarrooak/.m2/repository/io/micrometer/micrometer-commons/1.16.0/micrometer-commons-1.16.0.jar:/home/qarrooak/.m2/repository/io/micrometer/micrometer-jakarta9/1.16.0/micrometer-jakarta9-1.16.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-restclient/4.0.0/spring-boot-starter-restclient-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-restclient/4.0.0/spring-boot-restclient-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-http-client/4.0.0/spring-boot-http-client-4.0.0.jar:/home/qarrooak/.m2/repository/org/postgresql/postgresql/42.7.8/postgresql-42.7.8.jar:/home/qarrooak/.m2/repository/org/checkerframework/checker-qual/3.49.5/checker-qual-3.49.5.jar:/home/qarrooak/.m2/repository/org/flywaydb/flyway-database-postgresql/11.14.1/flyway-database-postgresql-11.14.1.jar:/home/qarrooak/.m2/repository/org/flywaydb/flyway-core/11.14.1/flyway-core-11.14.1.jar:/home/qarrooak/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.20.1/jackson-databind-2.20.1.jar:/home/qarrooak/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.20/jackson-annotations-2.20.jar:/home/qarrooak/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.20.1/jackson-core-2.20.1.jar:/home/qarrooak/.m2/repository/io/micrometer/micrometer-registry-prometheus/1.16.0/micrometer-registry-prometheus-1.16.0.jar:/home/qarrooak/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/qarrooak/.m2/repository/io/micrometer/micrometer-core/1.16.0/micrometer-core-1.16.0.jar:/home/qarrooak/.m2/repository/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar:/home/qarrooak/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/home/qarrooak/.m2/repository/io/prometheus/prometheus-metrics-core/1.4.3/prometheus-metrics-core-1.4.3.jar:/home/qarrooak/.m2/repository/io/prometheus/prometheus-metrics-model/1.4.3/prometheus-metrics-model-1.4.3.jar:/home/qarrooak/.m2/repository/io/prometheus/prometheus-metrics-config/1.4.3/prometheus-metrics-config-1.4.3.jar:/home/qarrooak/.m2/repository/io/prometheus/prometheus-metrics-tracer-common/1.4.3/prometheus-metrics-tracer-common-1.4.3.jar:/home/qarrooak/.m2/repository/io/prometheus/prometheus-metrics-exposition-formats/1.4.3/prometheus-metrics-exposition-formats-1.4.3.jar:/home/qarrooak/.m2/repository/io/prometheus/prometheus-metrics-exposition-textformats/1.4.3/prometheus-metrics-exposition-textformats-1.4.3.jar:/home/qarrooak/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/3.0.2/springdoc-openapi-starter-webmvc-ui-3.0.2.jar:/home/qarrooak/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/3.0.2/springdoc-openapi-starter-webmvc-api-3.0.2.jar:/home/qarrooak/.m2/repository/org/springdoc/springdoc-openapi-starter-common/3.0.2/springdoc-openapi-starter-common-3.0.2.jar:/home/qarrooak/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.43/swagger-core-jakarta-2.2.43.jar:/home/qarrooak/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.43/swagger-annotations-jakarta-2.2.43.jar:/home/qarrooak/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.43/swagger-models-jakarta-2.2.43.jar:/home/qarrooak/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.20.1/jackson-dataformat-yaml-2.20.1.jar:/home/qarrooak/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.20.1/jackson-datatype-jsr310-2.20.1.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-web-server/4.0.0/spring-boot-web-server-4.0.0.jar:/home/qarrooak/.m2/repository/org/webjars/swagger-ui/5.32.0/swagger-ui-5.32.0.jar:/home/qarrooak/.m2/repository/org/webjars/webjars-locator-lite/1.1.2/webjars-locator-lite-1.1.2.jar:/home/qarrooak/.m2/repository/io/github/resilience4j/resilience4j-circuitbreaker/2.4.0/resilience4j-circuitbreaker-2.4.0.jar:/home/qarrooak/.m2/repository/io/github/resilience4j/resilience4j-core/2.4.0/resilience4j-core-2.4.0.jar:/home/qarrooak/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/qarrooak/.m2/repository/io/github/resilience4j/resilience4j-micrometer/2.4.0/resilience4j-micrometer-2.4.0.jar:/home/qarrooak/.m2/repository/io/github/resilience4j/resilience4j-bulkhead/2.4.0/resilience4j-bulkhead-2.4.0.jar:/home/qarrooak/.m2/repository/io/github/resilience4j/resilience4j-retry/2.4.0/resilience4j-retry-2.4.0.jar:/home/qarrooak/.m2/repository/io/github/resilience4j/resilience4j-ratelimiter/2.4.0/resilience4j-ratelimiter-2.4.0.jar:/home/qarrooak/.m2/repository/io/github/resilience4j/resilience4j-timelimiter/2.4.0/resilience4j-timelimiter-2.4.0.jar:/home/qarrooak/.m2/repository/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-configuration-processor/4.0.0/spring-boot-configuration-processor-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-test/4.0.0/spring-boot-starter-test-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-test/4.0.0/spring-boot-test-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/4.0.0/spring-boot-test-autoconfigure-4.0.0.jar:/home/qarrooak/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/qarrooak/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.4/jakarta.xml.bind-api-4.0.4.jar:/home/qarrooak/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.4/jakarta.activation-api-2.1.4.jar:/home/qarrooak/.m2/repository/net/minidev/json-smart/2.6.0/json-smart-2.6.0.jar:/home/qarrooak/.m2/repository/net/minidev/accessors-smart/2.6.0/accessors-smart-2.6.0.jar:/home/qarrooak/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/home/qarrooak/.m2/repository/org/assertj/assertj-core/3.27.6/assertj-core-3.27.6.jar:/home/qarrooak/.m2/repository/net/bytebuddy/byte-buddy/1.17.8/byte-buddy-1.17.8.jar:/home/qarrooak/.m2/repository/org/awaitility/awaitility/4.3.0/awaitility-4.3.0.jar:/home/qarrooak/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/qarrooak/.m2/repository/org/junit/jupiter/junit-jupiter/6.0.1/junit-jupiter-6.0.1.jar:/home/qarrooak/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.0.1/junit-jupiter-api-6.0.1.jar:/home/qarrooak/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/qarrooak/.m2/repository/org/junit/platform/junit-platform-commons/6.0.1/junit-platform-commons-6.0.1.jar:/home/qarrooak/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/qarrooak/.m2/repository/org/junit/jupiter/junit-jupiter-params/6.0.1/junit-jupiter-params-6.0.1.jar:/home/qarrooak/.m2/repository/org/junit/jupiter/junit-jupiter-engine/6.0.1/junit-jupiter-engine-6.0.1.jar:/home/qarrooak/.m2/repository/org/junit/platform/junit-platform-engine/6.0.1/junit-platform-engine-6.0.1.jar:/home/qarrooak/.m2/repository/org/mockito/mockito-core/5.20.0/mockito-core-5.20.0.jar:/home/qarrooak/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar:/home/qarrooak/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/qarrooak/.m2/repository/org/mockito/mockito-junit-jupiter/5.20.0/mockito-junit-jupiter-5.20.0.jar:/home/qarrooak/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/qarrooak/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/qarrooak/.m2/repository/org/springframework/spring-core/7.0.1/spring-core-7.0.1.jar:/home/qarrooak/.m2/repository/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.jar:/home/qarrooak/.m2/repository/org/springframework/spring-test/7.0.1/spring-test-7.0.1.jar:/home/qarrooak/.m2/repository/org/xmlunit/xmlunit-core/2.10.4/xmlunit-core-2.10.4.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-webmvc-test/4.0.0/spring-boot-starter-webmvc-test-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-jackson-test/4.0.0/spring-boot-starter-jackson-test-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-webmvc-test/4.0.0/spring-boot-webmvc-test-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-resttestclient/4.0.0/spring-boot-resttestclient-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-starter-security-test/4.0.0/spring-boot-starter-security-test-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/boot/spring-boot-security-test/4.0.0/spring-boot-security-test-4.0.0.jar:/home/qarrooak/.m2/repository/org/springframework/security/spring-security-test/7.0.0/spring-security-test-7.0.0.jar:/home/qarrooak/.m2/repository/org/testcontainers/testcontainers-postgresql/2.0.2/testcontainers-postgresql-2.0.2.jar:/home/qarrooak/.m2/repository/org/testcontainers/testcontainers-jdbc/2.0.2/testcontainers-jdbc-2.0.2.jar:/home/qarrooak/.m2/repository/org/testcontainers/testcontainers-database-commons/2.0.2/testcontainers-database-commons-2.0.2.jar:/home/qarrooak/.m2/repository/org/testcontainers/testcontainers-junit-jupiter/2.0.2/testcontainers-junit-jupiter-2.0.2.jar:/home/qarrooak/.m2/repository/org/testcontainers/testcontainers/2.0.2/testcontainers-2.0.2.jar:/home/qarrooak/.m2/repository/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar:/home/qarrooak/.m2/repository/commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar:/home/qarrooak/.m2/repository/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar:/home/qarrooak/.m2/repository/org/apache/commons/commons-lang3/3.19.0/commons-lang3-3.19.0.jar:/home/qarrooak/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/home/qarrooak/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/home/qarrooak/.m2/repository/com/github/docker-java/docker-java-api/3.7.0/docker-java-api-3.7.0.jar:/home/qarrooak/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.7.0/docker-java-transport-zerodep-3.7.0.jar:/home/qarrooak/.m2/repository/com/github/docker-java/docker-java-transport/3.7.0/docker-java-transport-3.7.0.jar:/home/qarrooak/.m2/repository/net/java/dev/jna/jna/5.18.1/jna-5.18.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/qarrooak"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-07-15"/>
+    <property name="java.home" value="/usr/lib/jvm/java-21-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/qarrooak/Documents/PARMOUNT/uzgun_microservices"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="/home/qarrooak/Documents/PARMOUNT/uzgun_microservices/target/surefire/surefirebooter-20261027163714449_3.jar"/>
+    <property name="LOG_LEVEL_PATTERN" value="%5p [traceId=%X{traceId}]"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.8+9-Ubuntu-0ubuntu124.04.1"/>
+    <property name="user.name" value="qarrooak"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.8.0-86-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/qarrooak/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-21"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="21.0.8"/>
+    <property name="user.dir" value="/home/qarrooak/Documents/PARMOUNT/uzgun_microservices"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="134896"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="21.0.8+9-Ubuntu-0ubuntu124.04.1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[uzgun-user-service] "/>
+  </properties>
+  <testcase name="invalidTraceIsReplacedAndDoesNotLeakToNextRequest" classname="com.uz.uzgun_microservices.user.api.CustomerControllerTest" time="0.134">
+    <system-out><![CDATA[16:37:19.035 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.uz.uzgun_microservices.user.api.CustomerControllerTest]: CustomerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:37:19.222 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.uz.uzgun_microservices.App for test class com.uz.uzgun_microservices.user.api.CustomerControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2026-10-27T16:37:19.701+03:00  INFO [traceId=] 134896 --- [uzgun-user-service] [           main] c.u.u.user.api.CustomerControllerTest    : Starting CustomerControllerTest using Java 21.0.8 with PID 134896 (started by qarrooak in /home/qarrooak/Documents/PARMOUNT/uzgun_microservices)
+2026-10-27T16:37:19.704+03:00  INFO [traceId=] 134896 --- [uzgun-user-service] [           main] c.u.u.user.api.CustomerControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-27T16:37:19.705+03:00 DEBUG [traceId=] 134896 --- [uzgun-user-service] [           main] o.s.boot.SpringApplication               : Loading source class com.uz.uzgun_microservices.App
+2026-10-27T16:37:19.731+03:00 DEBUG [traceId=] 134896 --- [uzgun-user-service] [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5599d304
+2026-10-27T16:37:21.017+03:00 DEBUG [traceId=] 134896 --- [uzgun-user-service] [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.uz.uzgun_microservices'. Automatic @Repository and @Entity scanning is enabled.
+2026-10-27T16:37:21.656+03:00 DEBUG [traceId=] 134896 --- [uzgun-user-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2026-10-27T16:37:21.712+03:00 DEBUG [traceId=] 134896 --- [uzgun-user-service] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-10-27T16:37:21.759+03:00 DEBUG [traceId=] 134896 --- [uzgun-user-service] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-10-27T16:37:21.848+03:00 DEBUG [traceId=] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-10-27T16:37:21.965+03:00 DEBUG [traceId=] 134896 --- [uzgun-user-service] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, traceIdFilter urls=[/*] order=-2147483648, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-10-27T16:37:21.966+03:00 DEBUG [traceId=] 134896 --- [uzgun-user-service] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: 
+2026-10-27T16:37:21.987+03:00 DEBUG [traceId=] 134896 --- [uzgun-user-service] [           main] o.s.b.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
+2026-10-27T16:37:21.987+03:00 DEBUG [traceId=] 134896 --- [uzgun-user-service] [           main] o.s.b.s.filter.OrderedFormContentFilter  : Filter 'formContentFilter' configured for use
+2026-10-27T16:37:21.988+03:00 DEBUG [traceId=] 134896 --- [uzgun-user-service] [           main] o.s.b.s.f.OrderedRequestContextFilter    : Filter 'requestContextFilter' configured for use
+2026-10-27T16:37:21.988+03:00 DEBUG [traceId=] 134896 --- [uzgun-user-service] [           main] .DelegatingFilterProxyRegistrationBean$1 : Filter 'springSecurityFilterChain' configured for use
+2026-10-27T16:37:21.994+03:00  INFO [traceId=] 134896 --- [uzgun-user-service] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-27T16:37:21.995+03:00  INFO [traceId=] 134896 --- [uzgun-user-service] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-27T16:37:21.997+03:00  INFO [traceId=] 134896 --- [uzgun-user-service] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-10-27T16:37:22.031+03:00 DEBUG [traceId=] 134896 --- [uzgun-user-service] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+   DataWebAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.data.web.PageableHandlerMethodArgumentResolver', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.PageableHandlerMethodArgumentResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataWebAutoConfiguration#pageableCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.PageableHandlerMethodArgumentResolverCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataWebAutoConfiguration#sortCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.SortHandlerMethodArgumentResolverCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataWebAutoConfiguration#springDataWebSettings matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.SpringDataWebSettings; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   ErrorMvcAutoConfiguration#basicErrorController matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.webmvc.error.ErrorController; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration#errorAttributes matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.webmvc.error.ErrorAttributes; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration matched:
+      - @ConditionalOnBooleanProperty (spring.web.error.whitelabel.enabled=true) matched (OnPropertyCondition)
+      - ErrorTemplate Missing did not find error template view (ErrorMvcAutoConfiguration.ErrorTemplateMissingCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#beanNameViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#defaultErrorView matched:
+      - @ConditionalOnMissingBean (names: error; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpEncodingAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.filter.CharacterEncodingFilter' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnBooleanProperty (spring.servlet.encoding.enabled=true) matched (OnPropertyCondition)
+
+   HttpEncodingAutoConfiguration#characterEncodingFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.CharacterEncodingFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpMessageConvertersAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.HttpMessageConverter' (OnClassCondition)
+      - NoneNestedConditions 0 matched 1 did not; NestedCondition on HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition)
+
+   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.StringHttpMessageConverter' (OnClassCondition)
+
+   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration#stringHttpMessageConverter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.StringHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'tools.jackson.databind.json.JsonMapper' (OnClassCondition)
+
+   JacksonAutoConfiguration#jacksonJsonMapper matched:
+      - @ConditionalOnMissingBean (types: tools.jackson.databind.json.JsonMapper; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration#jsonMapperBuilder matched:
+      - @ConditionalOnMissingBean (types: tools.jackson.databind.json.JsonMapper$Builder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.JsonProblemDetailsConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.ProblemDetail' (OnClassCondition)
+
+   JacksonHttpMessageConvertersConfiguration.JacksonJsonHttpMessageConverterConfiguration matched:
+      - @ConditionalOnClass found required class 'tools.jackson.databind.json.JsonMapper' (OnClassCondition)
+      - @ConditionalOnProperty (spring.http.converters.preferred-json-mapper=jackson) matched (OnPropertyCondition)
+      - @ConditionalOnBean (types: tools.jackson.databind.json.JsonMapper; SearchStrategy: all) found bean 'jacksonJsonMapper' (OnBeanCondition)
+
+   JacksonHttpMessageConvertersConfiguration.JacksonJsonHttpMessageConverterConfiguration#jacksonJsonHttpMessageConverter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.JacksonJsonHttpMessageConverter ignored: ?; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcAutoConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+
+   MockMvcAutoConfiguration#dispatcherServlet matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcAutoConfiguration#dispatcherServletPath matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.webmvc.autoconfigure.DispatcherServletPath; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcConfiguration#mockMvc matched:
+      - @ConditionalOnMissingBean (types: org.springframework.test.web.servlet.MockMvc; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcConfiguration#mockMvcBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.test.web.servlet.MockMvcBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcTesterConfiguration matched:
+      - @ConditionalOnClass found required class 'org.assertj.core.api.Assert' (OnClassCondition)
+
+   MockMvcTesterConfiguration#mockMvcTester matched:
+      - @ConditionalOnMissingBean (types: org.springframework.test.web.servlet.assertj.MockMvcTester; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   OAuth2ResourceServerAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.oauth2.server.resource.authentication.BearerTokenAuthenticationToken' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   OAuth2ResourceServerJwtConfiguration.JwtDecoderConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   OAuth2ResourceServerJwtConfiguration.JwtDecoderConfiguration#jwtDecoderByIssuerUri matched:
+      - OpenID Connect Issuer URI Condition found issuer-uri property (IssuerUriCondition)
+
+   OAuth2ResourceServerOpaqueTokenConfiguration.OpaqueTokenIntrospectionClientConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   Oauth2ResourceServerConfiguration.JwtConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.oauth2.jwt.JwtDecoder' (OnClassCondition)
+
+   SecurityAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.DefaultAuthenticationEventPublisher' (OnClassCondition)
+
+   SecurityAutoConfiguration#authenticationEventPublisher matched:
+      - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationEventPublisher; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SecurityFilterAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer', 'org.springframework.security.config.http.SessionCreationPolicy' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   SecurityFilterAutoConfiguration#securityFilterChainRegistration matched:
+      - @ConditionalOnBean (names: springSecurityFilterChain; SearchStrategy: all) found bean 'springSecurityFilterChain' (OnBeanCondition)
+
+   SecurityMockMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.test.web.servlet.MockMvc' (OnClassCondition)
+
+   SecurityMockMvcAutoConfiguration#securityMockMvcBuilderCustomizer matched:
+      - @ConditionalOnBean (names: springSecurityFilterChain; SearchStrategy: all) found bean 'springSecurityFilterChain' (OnBeanCondition)
+
+   ServletWebSecurityAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   ServletWebSecurityAutoConfiguration.EnableWebSecurityConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutionAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor' (OnClassCondition)
+
+   TaskExecutorConfigurations.AsyncConfigurerConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration matched:
+      - AnyNestedCondition 1 matched 1 did not; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ModelCondition @ConditionalOnProperty (spring.task.execution.mode=force) did not find property 'spring.task.execution.mode'; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ExecutorBeanCondition @ConditionalOnMissingBean (types: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans (TaskExecutorConfigurations.OnExecutorCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutor matched:
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.ThreadPoolTaskExecutorBuilderConfiguration#threadPoolTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ValidationAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'jakarta.validation.executable.ExecutableValidator' (OnClassCondition)
+      - @ConditionalOnResource found location classpath:META-INF/services/jakarta.validation.spi.ValidationProvider (OnResourceCondition)
+
+   ValidationAutoConfiguration#defaultValidator matched:
+      - @ConditionalOnMissingBean (types: jakarta.validation.Validator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ValidationAutoConfiguration#methodValidationPostProcessor matched:
+      - @ConditionalOnMissingBean (types: org.springframework.validation.beanvalidation.MethodValidationPostProcessor; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#formContentFilter matched:
+      - @ConditionalOnBooleanProperty (spring.mvc.formcontent.filter.enabled=true) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#flashMapManager matched:
+      - @ConditionalOnMissingBean (names: flashMapManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#localeResolver matched:
+      - @ConditionalOnMissingBean (names: localeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#viewNameTranslator matched:
+      - @ConditionalOnMissingBean (names: viewNameTranslator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration matched:
+      - @ConditionalOnEnabledResourceChain found class org.webjars.WebJarVersionLocator (OnEnabledResourceChainCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springframework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defaultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnMissingBean (names: viewResolver types: org.springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   ErrorMvcAutoConfiguration.DefaultErrorViewResolverConfiguration#conventionErrorViewResolver:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) did not find any beans of type org.springframework.web.servlet.DispatcherServlet (OnBeanCondition)
+
+   GsonHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
+
+   Jackson2HttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration:
+      Did not match:
+         - AnyNestedCondition 0 matched 2 did not; NestedCondition on Jackson2HttpMessageConvertersConfiguration.PreferJackson2OrJacksonUnavailableCondition.JacksonUnavailable @ConditionalOnMissingBean (types: org.springframework.http.converter.json.JacksonJsonHttpMessageConverter; SearchStrategy: all) found beans of type 'org.springframework.http.converter.json.JacksonJsonHttpMessageConverter' jacksonJsonHttpMessageConverter; NestedCondition on Jackson2HttpMessageConvertersConfiguration.PreferJackson2OrJacksonUnavailableCondition.Jackson2Preferred @ConditionalOnProperty (spring.http.converters.preferred-json-mapper=jackson2) did not find property 'spring.http.converters.preferred-json-mapper' (Jackson2HttpMessageConvertersConfiguration.PreferJackson2OrJacksonUnavailableCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+
+   Jackson2HttpMessageConvertersConfiguration.MappingJackson2XmlHttpMessageConverterConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'tools.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
+
+   JacksonAutoConfiguration.CborConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'tools.jackson.dataformat.cbor.CBORMapper' (OnClassCondition)
+
+   JacksonAutoConfiguration.XmlConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'tools.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
+
+   JacksonHttpMessageConvertersConfiguration.JacksonXmlHttpMessageConverterConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'tools.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
+
+   JsonbHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.json.bind.Jsonb' (OnClassCondition)
+
+   KotlinSerializationHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'kotlinx.serialization.Serializable', 'kotlinx.serialization.json.Json' (OnClassCondition)
+
+   MessageSourceAutoConfiguration:
+      Did not match:
+         - ResourceBundle did not find bundle with basename messages (MessageSourceAutoConfiguration.ResourceBundleCondition)
+
+   MockMvcWebClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.htmlunit.WebClient' (OnClassCondition)
+
+   MockMvcWebDriverAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.openqa.selenium.htmlunit.HtmlUnitDriver' (OnClassCondition)
+
+   OAuth2ResourceServerJwtConfiguration.JwtConverterConfiguration:
+      Did not match:
+         - AnyNestedCondition 0 matched 3 did not; NestedCondition on OAuth2ResourceServerJwtConfiguration.JwtConverterPropertiesCondition.OnAuthoritiesClaimName @ConditionalOnProperty (spring.security.oauth2.resourceserver.jwt.authorities-claim-name) did not find property 'spring.security.oauth2.resourceserver.jwt.authorities-claim-name'; NestedCondition on OAuth2ResourceServerJwtConfiguration.JwtConverterPropertiesCondition.OnPrincipalClaimName @ConditionalOnProperty (spring.security.oauth2.resourceserver.jwt.principal-claim-name) did not find property 'spring.security.oauth2.resourceserver.jwt.principal-claim-name'; NestedCondition on OAuth2ResourceServerJwtConfiguration.JwtConverterPropertiesCondition.OnAuthorityPrefix @ConditionalOnProperty (spring.security.oauth2.resourceserver.jwt.authority-prefix) did not find property 'spring.security.oauth2.resourceserver.jwt.authority-prefix' (OAuth2ResourceServerJwtConfiguration.JwtConverterPropertiesCondition)
+
+   OAuth2ResourceServerJwtConfiguration.JwtDecoderConfiguration#jwtDecoderByJwkKeySetUri:
+      Did not match:
+         - @ConditionalOnProperty (spring.security.oauth2.resourceserver.jwt.jwk-set-uri) did not find property 'spring.security.oauth2.resourceserver.jwt.jwk-set-uri' (OnPropertyCondition)
+
+   OAuth2ResourceServerJwtConfiguration.JwtDecoderConfiguration#jwtDecoderByPublicKeyValue:
+      Did not match:
+         - Public Key Value Condition did not find public-key-location property (KeyValueCondition)
+
+   OAuth2ResourceServerJwtConfiguration.OAuth2SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' filterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   OAuth2ResourceServerOpaqueTokenConfiguration.OAuth2SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' filterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   OAuth2ResourceServerOpaqueTokenConfiguration.OpaqueTokenIntrospectionClientConfiguration#opaqueTokenIntrospector:
+      Did not match:
+         - @ConditionalOnProperty (spring.security.oauth2.resourceserver.opaquetoken.introspection-uri) did not find property 'spring.security.oauth2.resourceserver.opaquetoken.introspection-uri' (OnPropertyCondition)
+
+   SecurityAutoConfiguration.SecurityDataConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.data.repository.query.SecurityEvaluationContextExtension' (OnClassCondition)
+
+   SecurityMockMvcAutoConfiguration.SecurityMockMvcHtmlUnitDriverConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.openqa.selenium.htmlunit.HtmlUnitDriver' (OnClassCondition)
+
+   ServletWebSecurityAutoConfiguration.PathPatternRequestMatcherBuilderConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.boot.webmvc.autoconfigure.DispatcherServletPath; SearchStrategy: all) did not find any beans of type org.springframework.boot.webmvc.autoconfigure.DispatcherServletPath (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.boot.webmvc.autoconfigure.DispatcherServletPath' (OnClassCondition)
+
+   ServletWebSecurityAutoConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' filterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   TaskExecutorConfigurations.AsyncConfigurerWrapperConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans of type org.springframework.scheduling.annotation.AsyncConfigurer (OnBeanCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilderVirtualThreads:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder' simpleAsyncTaskExecutorBuilder (OnBeanCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutorVirtualThreads:
+      Did not match:
+         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - AnyNestedCondition 0 matched 3 did not; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'spring.security.user.password'; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'spring.security.user.name'; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass found unwanted class 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector' (MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+         - found 'session' scope (OnWebApplicationCondition)
+
+   WebMvcAutoConfiguration#hiddenHttpMethodFilter:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.mvc.hiddenmethod.filter.enabled=true) did not find property 'spring.mvc.hiddenmethod.filter.enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.ProblemDetailsErrorHandlingConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.mvc.problemdetails.enabled=true) did not find property 'spring.mvc.problemdetails.enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2026-10-27T16:37:22.034+03:00  INFO [traceId=] 134896 --- [uzgun-user-service] [           main] c.u.u.user.api.CustomerControllerTest    : Started CustomerControllerTest in 2.707 seconds (process running for 7.545)
+]]></system-out>
+  </testcase>
+  <testcase name="unauthenticatedIsJson401WithoutRedirect" classname="com.uz.uzgun_microservices.user.api.CustomerControllerTest" time="0.047"/>
+  <testcase name="queryTimeoutIs503" classname="com.uz.uzgun_microservices.user.api.CustomerControllerTest" time="0.104">
+    <system-out><![CDATA[2026-10-27T16:37:22.257+03:00 DEBUG [traceId=0f8e2308-3bfe-4a3e-9061-ebe4ba14e430] 134896 --- [uzgun-user-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.uz.uzgun_microservices.user.api.CustomerController#isCustomerPermittedToCheckout()
+2026-10-27T16:37:22.312+03:00 DEBUG [traceId=0f8e2308-3bfe-4a3e-9061-ebe4ba14e430] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.uz.uzgun_microservices.shared.error.ApiExceptionHandler#dbUnavailable(Exception)
+2026-10-27T16:37:22.313+03:00 ERROR [traceId=0f8e2308-3bfe-4a3e-9061-ebe4ba14e430] 134896 --- [uzgun-user-service] [           main] c.u.u.shared.error.ApiExceptionHandler   : Database unavailable
+
+org.springframework.dao.QueryTimeoutException: query timeout
+	at com.uz.uzgun_microservices.user.application.CheckoutPermissionService.isPermitted(CheckoutPermissionService.java:18) ~[classes/:na]
+	at com.uz.uzgun_microservices.user.api.CustomerController.isCustomerPermittedToCheckout(CustomerController.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.1.jar:7.0.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.1.jar:7.0.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.1.jar:7.0.1]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.proceed(AuthorizationManagerBeforeMethodInterceptor.java:271) ~[spring-security-core-7.0.0.jar:7.0.0]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.attemptAuthorization(AuthorizationManagerBeforeMethodInterceptor.java:266) ~[spring-security-core-7.0.0.jar:7.0.0]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:197) ~[spring-security-core-7.0.0.jar:7.0.0]
+	at org.springframework.security.config.annotation.method.configuration.DeferringMethodInterceptor.invoke(DeferringMethodInterceptor.java:44) ~[spring-security-config-7.0.0.jar:7.0.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.1.jar:7.0.1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.1.jar:7.0.1]
+	at com.uz.uzgun_microservices.user.api.CustomerController$$SpringCGLIB$$0.isCustomerPermittedToCheckout(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.14.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-7.0.1.jar:7.0.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.14.jar:6.1]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:160) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.AuthenticationFilter.doFilterInternal(AuthenticationFilter.java:194) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:207) ~[spring-security-oauth2-resource-server-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.oauth2.server.resource.web.OAuth2ProtectedResourceMetadataFilter.doFilterInternal(OAuth2ProtectedResourceMetadataFilter.java:97) ~[spring-security-oauth2-resource-server-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.1.jar:7.0.1]
+	at com.uz.uzgun_microservices.shared.api.TraceIdFilter.doFilterInternal(TraceIdFilter.java:34) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:199) ~[spring-test-7.0.1.jar:7.0.1]
+	at com.uz.uzgun_microservices.user.api.CustomerControllerTest.queryTimeoutIs503(CustomerControllerTest.java:133) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.1.jar:6.0.1]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.4.jar:3.5.4]
+
+2026-10-27T16:37:22.325+03:00 DEBUG [traceId=0f8e2308-3bfe-4a3e-9061-ebe4ba14e430] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:application/json' in response
+2026-10-27T16:37:22.329+03:00 DEBUG [traceId=0f8e2308-3bfe-4a3e-9061-ebe4ba14e430] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [GenericResponse[payload=null, errors=[ApiErrorResponse[code=SERVICE_UNAVAILABLE, message=Service una (truncated)...]
+2026-10-27T16:37:22.333+03:00 DEBUG [traceId=0f8e2308-3bfe-4a3e-9061-ebe4ba14e430] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.QueryTimeoutException: query timeout]
+]]></system-out>
+  </testcase>
+  <testcase name="unavailableDatabaseIs503" classname="com.uz.uzgun_microservices.user.api.CustomerControllerTest" time="0.012">
+    <system-out><![CDATA[2026-10-27T16:37:22.346+03:00 DEBUG [traceId=c0e2cece-d8e8-4bda-98b1-7ed5418af904] 134896 --- [uzgun-user-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.uz.uzgun_microservices.user.api.CustomerController#isCustomerPermittedToCheckout()
+2026-10-27T16:37:22.347+03:00 DEBUG [traceId=c0e2cece-d8e8-4bda-98b1-7ed5418af904] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.uz.uzgun_microservices.shared.error.ApiExceptionHandler#dbUnavailable(Exception)
+2026-10-27T16:37:22.347+03:00 ERROR [traceId=c0e2cece-d8e8-4bda-98b1-7ed5418af904] 134896 --- [uzgun-user-service] [           main] c.u.u.shared.error.ApiExceptionHandler   : Database unavailable
+
+org.springframework.transaction.CannotCreateTransactionException: db unavailable
+	at com.uz.uzgun_microservices.user.application.CheckoutPermissionService.isPermitted(CheckoutPermissionService.java:18) ~[classes/:na]
+	at com.uz.uzgun_microservices.user.api.CustomerController.isCustomerPermittedToCheckout(CustomerController.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.1.jar:7.0.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.1.jar:7.0.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.1.jar:7.0.1]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.proceed(AuthorizationManagerBeforeMethodInterceptor.java:271) ~[spring-security-core-7.0.0.jar:7.0.0]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.attemptAuthorization(AuthorizationManagerBeforeMethodInterceptor.java:266) ~[spring-security-core-7.0.0.jar:7.0.0]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:197) ~[spring-security-core-7.0.0.jar:7.0.0]
+	at org.springframework.security.config.annotation.method.configuration.DeferringMethodInterceptor.invoke(DeferringMethodInterceptor.java:44) ~[spring-security-config-7.0.0.jar:7.0.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.1.jar:7.0.1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.1.jar:7.0.1]
+	at com.uz.uzgun_microservices.user.api.CustomerController$$SpringCGLIB$$0.isCustomerPermittedToCheckout(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.14.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-7.0.1.jar:7.0.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.14.jar:6.1]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:160) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.AuthenticationFilter.doFilterInternal(AuthenticationFilter.java:194) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:207) ~[spring-security-oauth2-resource-server-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.oauth2.server.resource.web.OAuth2ProtectedResourceMetadataFilter.doFilterInternal(OAuth2ProtectedResourceMetadataFilter.java:97) ~[spring-security-oauth2-resource-server-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.1.jar:7.0.1]
+	at com.uz.uzgun_microservices.shared.api.TraceIdFilter.doFilterInternal(TraceIdFilter.java:34) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.1.jar:7.0.1]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:199) ~[spring-test-7.0.1.jar:7.0.1]
+	at com.uz.uzgun_microservices.user.api.CustomerControllerTest.unavailableDatabaseIs503(CustomerControllerTest.java:122) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.1.jar:6.0.1]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.1.jar:6.0.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.4.jar:3.5.4]
+
+2026-10-27T16:37:22.349+03:00 DEBUG [traceId=c0e2cece-d8e8-4bda-98b1-7ed5418af904] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:application/json' in response
+2026-10-27T16:37:22.349+03:00 DEBUG [traceId=c0e2cece-d8e8-4bda-98b1-7ed5418af904] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [GenericResponse[payload=null, errors=[ApiErrorResponse[code=SERVICE_UNAVAILABLE, message=Service una (truncated)...]
+2026-10-27T16:37:22.349+03:00 DEBUG [traceId=c0e2cece-d8e8-4bda-98b1-7ed5418af904] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.transaction.CannotCreateTransactionException: db unavailable]
+]]></system-out>
+  </testcase>
+  <testcase name="invalidSubjectIs401(String)[1]" classname="com.uz.uzgun_microservices.user.api.CustomerControllerTest" time="0.013">
+    <system-out><![CDATA[2026-10-27T16:37:22.365+03:00 DEBUG [traceId=e82a95c7-c21d-4219-9ea3-a32927c4776b] 134896 --- [uzgun-user-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.uz.uzgun_microservices.user.api.CustomerController#isCustomerPermittedToCheckout()
+2026-10-27T16:37:22.366+03:00 DEBUG [traceId=e82a95c7-c21d-4219-9ea3-a32927c4776b] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.uz.uzgun_microservices.shared.error.ApiExceptionHandler#unauthorized(AuthenticationException)
+2026-10-27T16:37:22.367+03:00 DEBUG [traceId=e82a95c7-c21d-4219-9ea3-a32927c4776b] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:application/json' in response
+2026-10-27T16:37:22.367+03:00 DEBUG [traceId=e82a95c7-c21d-4219-9ea3-a32927c4776b] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [GenericResponse[payload=null, errors=[ApiErrorResponse[code=UNAUTHORIZED, message=Authentication req (truncated)...]
+2026-10-27T16:37:22.367+03:00 DEBUG [traceId=e82a95c7-c21d-4219-9ea3-a32927c4776b] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Invalid subject in token]
+]]></system-out>
+  </testcase>
+  <testcase name="invalidSubjectIs401(String)[2]" classname="com.uz.uzgun_microservices.user.api.CustomerControllerTest" time="0.017">
+    <system-out><![CDATA[2026-10-27T16:37:22.378+03:00 DEBUG [traceId=84ef154b-cb6d-4de7-abe9-d21efa1129fb] 134896 --- [uzgun-user-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.uz.uzgun_microservices.user.api.CustomerController#isCustomerPermittedToCheckout()
+2026-10-27T16:37:22.379+03:00 DEBUG [traceId=84ef154b-cb6d-4de7-abe9-d21efa1129fb] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.uz.uzgun_microservices.shared.error.ApiExceptionHandler#unauthorized(AuthenticationException)
+2026-10-27T16:37:22.380+03:00 DEBUG [traceId=84ef154b-cb6d-4de7-abe9-d21efa1129fb] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:application/json' in response
+2026-10-27T16:37:22.380+03:00 DEBUG [traceId=84ef154b-cb6d-4de7-abe9-d21efa1129fb] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [GenericResponse[payload=null, errors=[ApiErrorResponse[code=UNAUTHORIZED, message=Authentication req (truncated)...]
+2026-10-27T16:37:22.380+03:00 DEBUG [traceId=84ef154b-cb6d-4de7-abe9-d21efa1129fb] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Invalid subject in token]
+]]></system-out>
+  </testcase>
+  <testcase name="invalidSubjectIs401(String)[3]" classname="com.uz.uzgun_microservices.user.api.CustomerControllerTest" time="0.01">
+    <system-out><![CDATA[2026-10-27T16:37:22.398+03:00 DEBUG [traceId=68b4c9c5-a9b6-4e43-84f1-9281327d4dc2] 134896 --- [uzgun-user-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.uz.uzgun_microservices.user.api.CustomerController#isCustomerPermittedToCheckout()
+2026-10-27T16:37:22.399+03:00 DEBUG [traceId=68b4c9c5-a9b6-4e43-84f1-9281327d4dc2] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.uz.uzgun_microservices.shared.error.ApiExceptionHandler#unauthorized(AuthenticationException)
+2026-10-27T16:37:22.399+03:00 DEBUG [traceId=68b4c9c5-a9b6-4e43-84f1-9281327d4dc2] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:application/json' in response
+2026-10-27T16:37:22.400+03:00 DEBUG [traceId=68b4c9c5-a9b6-4e43-84f1-9281327d4dc2] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [GenericResponse[payload=null, errors=[ApiErrorResponse[code=UNAUTHORIZED, message=Authentication req (truncated)...]
+2026-10-27T16:37:22.400+03:00 DEBUG [traceId=68b4c9c5-a9b6-4e43-84f1-9281327d4dc2] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Invalid subject in token]
+]]></system-out>
+  </testcase>
+  <testcase name="invalidSubjectIs401(String)[4]" classname="com.uz.uzgun_microservices.user.api.CustomerControllerTest" time="0.009">
+    <system-out><![CDATA[2026-10-27T16:37:22.410+03:00 DEBUG [traceId=b1972a13-4707-4027-9be3-20529aa381e9] 134896 --- [uzgun-user-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.uz.uzgun_microservices.user.api.CustomerController#isCustomerPermittedToCheckout()
+2026-10-27T16:37:22.411+03:00 DEBUG [traceId=b1972a13-4707-4027-9be3-20529aa381e9] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.uz.uzgun_microservices.shared.error.ApiExceptionHandler#unauthorized(AuthenticationException)
+2026-10-27T16:37:22.411+03:00 DEBUG [traceId=b1972a13-4707-4027-9be3-20529aa381e9] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:application/json' in response
+2026-10-27T16:37:22.411+03:00 DEBUG [traceId=b1972a13-4707-4027-9be3-20529aa381e9] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [GenericResponse[payload=null, errors=[ApiErrorResponse[code=UNAUTHORIZED, message=Authentication req (truncated)...]
+2026-10-27T16:37:22.412+03:00 DEBUG [traceId=b1972a13-4707-4027-9be3-20529aa381e9] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Invalid subject in token]
+]]></system-out>
+  </testcase>
+  <testcase name="sellerIsForbidden" classname="com.uz.uzgun_microservices.user.api.CustomerControllerTest" time="0.009">
+    <system-out><![CDATA[2026-10-27T16:37:22.421+03:00 DEBUG [traceId=90195f78-1a07-489c-b8e5-7bfac3d15446] 134896 --- [uzgun-user-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.uz.uzgun_microservices.user.api.CustomerController#isCustomerPermittedToCheckout()
+2026-10-27T16:37:22.422+03:00 DEBUG [traceId=90195f78-1a07-489c-b8e5-7bfac3d15446] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.uz.uzgun_microservices.shared.error.ApiExceptionHandler#forbidden(AccessDeniedException)
+2026-10-27T16:37:22.423+03:00 DEBUG [traceId=90195f78-1a07-489c-b8e5-7bfac3d15446] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:application/json' in response
+2026-10-27T16:37:22.423+03:00 DEBUG [traceId=90195f78-1a07-489c-b8e5-7bfac3d15446] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [GenericResponse[payload=null, errors=[ApiErrorResponse[code=FORBIDDEN, message=Access denied, detail (truncated)...]
+2026-10-27T16:37:22.423+03:00 DEBUG [traceId=90195f78-1a07-489c-b8e5-7bfac3d15446] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+]]></system-out>
+  </testcase>
+  <testcase name="wrongMethodReturns405AndAllowHeader" classname="com.uz.uzgun_microservices.user.api.CustomerControllerTest" time="0.017">
+    <system-out><![CDATA[2026-10-27T16:37:22.436+03:00 DEBUG [traceId=df05b790-4358-423f-a44f-8996c07dcea3] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.uz.uzgun_microservices.shared.error.ApiExceptionHandler#methodNotAllowed(HttpRequestMethodNotSupportedException)
+2026-10-27T16:37:22.436+03:00 DEBUG [traceId=df05b790-4358-423f-a44f-8996c07dcea3] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:application/json' in response
+2026-10-27T16:37:22.437+03:00 DEBUG [traceId=df05b790-4358-423f-a44f-8996c07dcea3] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [GenericResponse[payload=null, errors=[ApiErrorResponse[code=METHOD_NOT_ALLOWED, message=Method not a (truncated)...]
+2026-10-27T16:37:22.437+03:00 DEBUG [traceId=df05b790-4358-423f-a44f-8996c07dcea3] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+]]></system-out>
+  </testcase>
+  <testcase name="returnsExplicitGrant(boolean)[1]" classname="com.uz.uzgun_microservices.user.api.CustomerControllerTest" time="0.014">
+    <system-out><![CDATA[2026-10-27T16:37:22.453+03:00 DEBUG [traceId=805e393e-cc08-4cfc-86fb-0e9b18691f23] 134896 --- [uzgun-user-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.uz.uzgun_microservices.user.api.CustomerController#isCustomerPermittedToCheckout()
+2026-10-27T16:37:22.455+03:00 DEBUG [traceId=805e393e-cc08-4cfc-86fb-0e9b18691f23] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2026-10-27T16:37:22.456+03:00 DEBUG [traceId=805e393e-cc08-4cfc-86fb-0e9b18691f23] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [GenericResponse[payload=PermissionToCheckoutDto[permitted=true], errors=null, timestamp=2026-10-27T1 (truncated)...]
+]]></system-out>
+  </testcase>
+  <testcase name="returnsExplicitGrant(boolean)[2]" classname="com.uz.uzgun_microservices.user.api.CustomerControllerTest" time="0.009">
+    <system-out><![CDATA[2026-10-27T16:37:22.470+03:00 DEBUG [traceId=f60b3e58-b22d-4362-8612-2524d6c4c2c5] 134896 --- [uzgun-user-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.uz.uzgun_microservices.user.api.CustomerController#isCustomerPermittedToCheckout()
+2026-10-27T16:37:22.471+03:00 DEBUG [traceId=f60b3e58-b22d-4362-8612-2524d6c4c2c5] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2026-10-27T16:37:22.471+03:00 DEBUG [traceId=f60b3e58-b22d-4362-8612-2524d6c4c2c5] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [GenericResponse[payload=PermissionToCheckoutDto[permitted=false], errors=null, timestamp=2026-10-27T (truncated)...]
+]]></system-out>
+  </testcase>
+  <testcase name="unknownCustomerIs400" classname="com.uz.uzgun_microservices.user.api.CustomerControllerTest" time="0.009">
+    <system-out><![CDATA[2026-10-27T16:37:22.480+03:00 DEBUG [traceId=a9bcb82a-12eb-4808-8c80-ad7f7db48600] 134896 --- [uzgun-user-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.uz.uzgun_microservices.user.api.CustomerController#isCustomerPermittedToCheckout()
+2026-10-27T16:37:22.481+03:00 DEBUG [traceId=a9bcb82a-12eb-4808-8c80-ad7f7db48600] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.uz.uzgun_microservices.shared.error.ApiExceptionHandler#api(ApiException)
+2026-10-27T16:37:22.482+03:00  WARN [traceId=a9bcb82a-12eb-4808-8c80-ad7f7db48600] 134896 --- [uzgun-user-service] [           main] c.u.u.shared.error.ApiExceptionHandler   : API error CUSTOMER_NOT_FOUND: Customer not found
+2026-10-27T16:37:22.482+03:00 DEBUG [traceId=a9bcb82a-12eb-4808-8c80-ad7f7db48600] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Found 'Content-Type:application/json' in response
+2026-10-27T16:37:22.482+03:00 DEBUG [traceId=a9bcb82a-12eb-4808-8c80-ad7f7db48600] 134896 --- [uzgun-user-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [GenericResponse[payload=null, errors=[ApiErrorResponse[code=CUSTOMER_NOT_FOUND, message=Customer not (truncated)...]
+2026-10-27T16:37:22.483+03:00 DEBUG [traceId=a9bcb82a-12eb-4808-8c80-ad7f7db48600] 134896 --- [uzgun-user-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.uz.uzgun_microservices.user.application.CustomerNotFoundException: Customer not found]
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ApiExceptionHandler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">uzgun-user-service</a> &gt; <a href="index.source.html" class="el_package">com.uz.uzgun_microservices.shared.error</a> &gt; <span class="el_source">ApiExceptionHandler.java</span></div><h1>ApiExceptionHandler.java</h1><pre class="source lang-java linenums">package com.uz.uzgun_microservices.shared.error;
+
+import com.uz.uzgun_microservices.shared.api.ApiErrorResponse;
+import com.uz.uzgun_microservices.shared.api.FieldViolation;
+import com.uz.uzgun_microservices.shared.api.GenericResponse;
+import com.uz.uzgun_microservices.shared.api.TraceContext;
+import jakarta.validation.ConstraintViolationException;
+import java.util.List;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.DataAccessResourceFailureException;
+import org.springframework.dao.QueryTimeoutException;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.transaction.CannotCreateTransactionException;
+import org.springframework.transaction.TransactionTimedOutException;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.MissingServletRequestParameterException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
+import org.springframework.web.servlet.resource.NoResourceFoundException;
+
+<span class="fc" id="L29">@Slf4j</span>
+@RestControllerAdvice
+<span class="fc" id="L31">public class ApiExceptionHandler {</span>
+  @ExceptionHandler(ApiException.class)
+  public ResponseEntity&lt;GenericResponse&lt;Object&gt;&gt; api(ApiException ex) {
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">    if (ex.getStatus().is5xxServerError()) log.error(&quot;API error {}&quot;, ex.getCode(), ex);</span>
+<span class="fc" id="L35">    else log.warn(&quot;API error {}: {}&quot;, ex.getCode(), ex.getMessage());</span>
+<span class="fc" id="L36">    return respond(</span>
+<span class="fc" id="L37">        ex.getStatus(), ApiErrorResponse.of(ex.getCode(), ex.getMessage(), ex.getPayload()));</span>
+  }
+
+  private ResponseEntity&lt;GenericResponse&lt;Object&gt;&gt; respond(
+      HttpStatus status, ApiErrorResponse error) {
+<span class="fc" id="L42">    var response = ResponseEntity.status(status).contentType(MediaType.APPLICATION_JSON);</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">    if (status == HttpStatus.UNAUTHORIZED) {</span>
+<span class="fc" id="L44">      response.header(HttpHeaders.WWW_AUTHENTICATE, &quot;Bearer&quot;);</span>
+    }
+<span class="fc" id="L46">    return response.body(GenericResponse.failure(List.of(error), TraceContext.traceId()));</span>
+  }
+
+  @ExceptionHandler(MethodArgumentNotValidException.class)
+  public ResponseEntity&lt;GenericResponse&lt;Object&gt;&gt; validation(MethodArgumentNotValidException ex) {
+<span class="nc" id="L51">    List&lt;FieldViolation&gt; fields =</span>
+<span class="nc" id="L52">        ex.getBindingResult().getFieldErrors().stream()</span>
+<span class="nc" id="L53">            .map(f -&gt; new FieldViolation(f.getField(), f.getDefaultMessage()))</span>
+<span class="nc" id="L54">            .toList();</span>
+<span class="nc" id="L55">    return respond(</span>
+        HttpStatus.BAD_REQUEST,
+<span class="nc" id="L57">        ApiErrorResponse.of(ErrorCodes.VALIDATION_FAILED, &quot;Request validation failed&quot;, fields));</span>
+  }
+
+  @ExceptionHandler(ConstraintViolationException.class)
+  public ResponseEntity&lt;GenericResponse&lt;Object&gt;&gt; constraint(ConstraintViolationException ex) {
+<span class="nc" id="L62">    List&lt;FieldViolation&gt; fields =</span>
+<span class="nc" id="L63">        ex.getConstraintViolations().stream()</span>
+<span class="nc" id="L64">            .map(v -&gt; new FieldViolation(v.getPropertyPath().toString(), v.getMessage()))</span>
+<span class="nc" id="L65">            .toList();</span>
+<span class="nc" id="L66">    return respond(</span>
+        HttpStatus.BAD_REQUEST,
+<span class="nc" id="L68">        ApiErrorResponse.of(ErrorCodes.VALIDATION_FAILED, &quot;Request validation failed&quot;, fields));</span>
+  }
+
+  @ExceptionHandler({
+    HttpMessageNotReadableException.class,
+    MethodArgumentTypeMismatchException.class,
+    MissingServletRequestParameterException.class
+  })
+  public ResponseEntity&lt;GenericResponse&lt;Object&gt;&gt; malformed(Exception ex) {
+<span class="nc" id="L77">    log.warn(&quot;Malformed request: {}&quot;, ex.getMessage());</span>
+<span class="nc" id="L78">    return respond(</span>
+<span class="nc" id="L79">        HttpStatus.BAD_REQUEST, ApiErrorResponse.of(ErrorCodes.BAD_REQUEST, &quot;Malformed request&quot;));</span>
+  }
+
+  @ExceptionHandler(AuthenticationException.class)
+  public ResponseEntity&lt;GenericResponse&lt;Object&gt;&gt; unauthorized(AuthenticationException ex) {
+<span class="fc" id="L84">    return respond(</span>
+        HttpStatus.UNAUTHORIZED,
+<span class="fc" id="L86">        ApiErrorResponse.of(ErrorCodes.UNAUTHORIZED, &quot;Authentication required&quot;));</span>
+  }
+
+  @ExceptionHandler(AccessDeniedException.class)
+  public ResponseEntity&lt;GenericResponse&lt;Object&gt;&gt; forbidden(AccessDeniedException ex) {
+<span class="fc" id="L91">    return respond(</span>
+<span class="fc" id="L92">        HttpStatus.FORBIDDEN, ApiErrorResponse.of(ErrorCodes.FORBIDDEN, &quot;Access denied&quot;));</span>
+  }
+
+  @ExceptionHandler(NoResourceFoundException.class)
+  public ResponseEntity&lt;GenericResponse&lt;Object&gt;&gt; notFound(NoResourceFoundException ex) {
+<span class="nc" id="L97">    return respond(</span>
+<span class="nc" id="L98">        HttpStatus.NOT_FOUND, ApiErrorResponse.of(ErrorCodes.NOT_FOUND, &quot;Resource not found&quot;));</span>
+  }
+
+  @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
+  public ResponseEntity&lt;GenericResponse&lt;Object&gt;&gt; methodNotAllowed(
+      HttpRequestMethodNotSupportedException ex) {
+<span class="fc" id="L104">    var response =</span>
+<span class="fc" id="L105">        respond(</span>
+            HttpStatus.METHOD_NOT_ALLOWED,
+<span class="fc" id="L107">            ApiErrorResponse.of(ErrorCodes.METHOD_NOT_ALLOWED, &quot;Method not allowed&quot;));</span>
+<span class="fc" id="L108">    var headers = new HttpHeaders();</span>
+<span class="fc" id="L109">    headers.putAll(response.getHeaders());</span>
+<span class="pc bpc" id="L110" title="1 of 2 branches missed.">    if (ex.getSupportedHttpMethods() != null) {</span>
+<span class="fc" id="L111">      headers.setAllow(ex.getSupportedHttpMethods());</span>
+    }
+<span class="fc" id="L113">    return new ResponseEntity&lt;&gt;(response.getBody(), headers, response.getStatusCode());</span>
+  }
+
+  @ExceptionHandler({
+    DataAccessResourceFailureException.class,
+    QueryTimeoutException.class,
+    CannotCreateTransactionException.class,
+    TransactionTimedOutException.class
+  })
+  public ResponseEntity&lt;GenericResponse&lt;Object&gt;&gt; dbUnavailable(Exception ex) {
+<span class="fc" id="L123">    log.error(&quot;Database unavailable&quot;, ex);</span>
+<span class="fc" id="L124">    return respond(</span>
+        HttpStatus.SERVICE_UNAVAILABLE,
+<span class="fc" id="L126">        ApiErrorResponse.of(ErrorCodes.SERVICE_UNAVAILABLE, &quot;Service unavailable&quot;));</span>
+  }
+
+  @ExceptionHandler(Exception.class)
+  public ResponseEntity&lt;GenericResponse&lt;Object&gt;&gt; unexpected(Exception ex) {
+<span class="nc" id="L131">    log.error(&quot;Unexpected error&quot;, ex);</span>
+<span class="nc" id="L132">    return respond(</span>
+        HttpStatus.INTERNAL_SERVER_ERROR,
+<span class="nc" id="L134">        ApiErrorResponse.of(ErrorCodes.INTERNAL_ERROR, &quot;Unexpected error&quot;));</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

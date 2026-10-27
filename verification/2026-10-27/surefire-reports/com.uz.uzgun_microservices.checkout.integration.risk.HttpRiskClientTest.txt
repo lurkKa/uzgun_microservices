@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.uz.uzgun_microservices.checkout.integration.risk.HttpRiskClientTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.738 s -- in com.uz.uzgun_microservices.checkout.integration.risk.HttpRiskClientTest

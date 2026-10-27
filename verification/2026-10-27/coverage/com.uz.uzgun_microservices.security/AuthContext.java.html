@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AuthContext.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">uzgun-user-service</a> &gt; <a href="index.source.html" class="el_package">com.uz.uzgun_microservices.security</a> &gt; <span class="el_source">AuthContext.java</span></div><h1>AuthContext.java</h1><pre class="source lang-java linenums">package com.uz.uzgun_microservices.security;
+
+import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
+import org.springframework.stereotype.Component;
+
+@Component
+<span class="fc" id="L11">public class AuthContext {</span>
+  public long currentUserId() {
+<span class="fc" id="L13">    Authentication auth = SecurityContextHolder.getContext().getAuthentication();</span>
+<span class="pc bpc" id="L14" title="1 of 2 branches missed.">    if (auth instanceof JwtAuthenticationToken jwt) {</span>
+      try {
+<span class="fc" id="L16">        long userId = Long.parseLong(jwt.getToken().getSubject());</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        if (userId &lt;= 0) throw new BadCredentialsException(&quot;Invalid subject in token&quot;);</span>
+<span class="fc" id="L18">        return userId;</span>
+<span class="fc" id="L19">      } catch (NumberFormatException e) {</span>
+<span class="fc" id="L20">        throw new BadCredentialsException(&quot;Invalid subject in token&quot;);</span>
+      }
+    }
+<span class="nc" id="L23">    throw new AuthenticationCredentialsNotFoundException(&quot;No authenticated user&quot;);</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>
